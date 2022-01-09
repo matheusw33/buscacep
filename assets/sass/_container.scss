@@ -1,0 +1,87 @@
+.container{  
+    @include flx(align-items, center);  
+    background-image: linear-gradient(to right, $azul-escuro, $azul-claro);
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;       
+
+    &_caixa{
+        @include flx(flex-direction, column);
+        align-items: center;
+        background-color: $branco;
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.705);
+        gap: 2rem;        
+        justify-content: center;
+        padding: 5rem;
+        transition: .5s;
+
+        @include for-phone-only{
+            padding: 5rem 2rem;
+        }
+    }
+
+    &_titulo{
+        color: $azul-escuro;
+        font-size: 2rem;
+    }
+
+    &_form{
+        @include flx(flex-direction, column);
+        width: 100%;
+    }
+
+    &_label{
+        color: $azul-escuro;
+        font-size: .8rem ;
+        font-weight: 600;
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+    }
+
+    &_input{
+        padding: .5rem 1rem;
+        border-radius: 10px;
+        border: 1px solid $cinza-claro;
+        outline: 0;
+    }
+
+    &_botao{
+        @include botao;
+    }
+
+    &_caixa-resultado{
+        position: absolute;
+        left: -100vw;
+        padding: 5rem;
+        transform: scale(.5);
+        
+    }
+
+    &_caixa-visivel{
+        left: auto;    
+        transform: scale(1);
+        transition: .5s;
+        
+        @include for-phone-only{
+            padding: 5rem 3rem;
+        }
+    }
+
+    &_lista{
+        @include flx(flex-direction,column);
+        gap: 1.5rem;
+    }
+
+    &_item{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    &_botao-fechar{
+        @include botao;
+    }
+}
+.caixa-menor{
+    transform: scale(0.5);
+}

@@ -1,0 +1,30 @@
+$azul-escuro: #184165;
+$azul-claro: #92c3fb;
+$branco: #FFFFFF;
+$cinza-claro: #d9d9d9;
+
+@mixin for-phone-only { 
+    @media screen and(max-width: 500px){
+        @content;
+    } 
+}
+
+@mixin flx($propriedade, $valor){
+    display: flex;
+    #{$propriedade}:$valor;
+}
+
+@mixin botao {
+    margin-top: .5rem;
+        padding: .5rem;
+        background-color: $azul-escuro;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        color: $branco;
+        font-size: .9rem;
+        width: 100%;
+}
+
+@import '_container';
+
